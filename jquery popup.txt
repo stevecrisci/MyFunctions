@@ -1,0 +1,10 @@
+@*ADD POPUP*@
+ Name:<input id="txtName" title="Your name will appear on card." /><br/><br/>
+
+Age:&nbsp;&nbsp;&nbsp;<input id="txtAge" title="We ask for your age only for statistical purposes." /><br/><br/>
+<script>
+    $(function () {
+        $(document).tooltip();
+    });
+</script>
+@*END ADD POPUP*@

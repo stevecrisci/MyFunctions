@@ -1,0 +1,8 @@
+                    // Create an Option object
+                    var opt = document.createElement("option");
+        
+                    // Add an Option object to Drop Down/List Box
+                    document.getElementById("ContactMethodID").options.add(opt);
+                    // Assign text and value to Option object
+                    opt.text = "my goodness";
+                    opt.value = 0;

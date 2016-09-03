@@ -1,0 +1,41 @@
+<button onclick="location.href='@Url.Action("Index", "Users")';return false;">Cancel</button>
+
+
+<button onclick="@Url.Action("index", "Family", new {familyid = Model.FamilyID })">Cancel</button>
+-------------------------------------
+
+@using (Html.BeginForm("ActionName", "ControllerName")){
+   <input type="button" value="Submit" />
+}
+
+
+--------------------------
+<%= Html.ActionLink("Button Name", "Index", null, new { @class="classname" }) %>
+
+a.classname
+{
+    background: url(../Images/image.gif) no-repeat top left;
+     display: block;
+     width: 150px;
+     height: 150px;
+     text-indent: -9999px; /* hides the link text */
+}
+
+----------------------------------
+
+
+@Html.ActionLink("ActionName", "ControllerName",null, new {type = "button" })
+
+a[type="button"] {
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+    text-decoration: none;
+}
+
+

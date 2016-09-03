@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").text($("form").serialize());
+  });
+});
+</script>
+</head>
+<body>
+<form action="">
+First Name: <input type="text" name="FirstName"   /><br>
+Last Name: <input type="text" name="LastName"   /><br>
+Notary ID: <input type="text" name="NotaryID"  /><br>
+</form>
+<button>Serialize String</button>
+<div></div>
+</body>
+</html>

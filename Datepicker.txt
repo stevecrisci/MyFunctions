@@ -1,0 +1,14 @@
+ <script>
+                            $(function () {
+                                $("#InitialDate").datepicker({
+                                    onClose: function(dateText, inst) {
+                                        $("#RightToRepresent").focus();},
+                                    constrainInput: true,
+                                    minDate: "0",
+                                    showOtherMonths: true, 
+                                    shownOn: "focus",
+                                    changeMonth: true, changeYear: true 
+                                });
+                                //.attr("placeholder", "mm/dd/yyyy").
+                            });
+                        </script>

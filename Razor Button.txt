@@ -1,0 +1,1 @@
+<input type="button" value="Change Password" onclick="@("window.location.href='" + @Url.Action("ChangePassword", "Account") + "'")    ;" />

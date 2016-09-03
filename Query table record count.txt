@@ -1,0 +1,5 @@
+SELECT        t.name AS TableName, i.rows AS Records
+FROM            sys.sysobjects AS t INNER JOIN
+                         sys.sysindexes AS i ON t.id = i.id
+WHERE        (t.xtype = 'U') AND (i.indid IN (0, 1))
+ORDER BY TableName

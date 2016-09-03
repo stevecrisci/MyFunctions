@@ -1,0 +1,34 @@
+    Screenshot screenshot = new Screenshot();
+
+    screenshot.ID = Guid.NewGuid();
+    screenshot.Interval = 1000;
+    screenshot.IsTurnedOn = true;
+    screenshot.PlayerID = player.ID;
+    screenshot.Refreshed = DateTime.Now;
+    screenshot.Screen = imageBytes;
+
+    this.ObjectContext.Screenshots.AddObject(screenshot);
+    this.ObjectContext.SaveChanges();
+-----------------------------------
+var context = new DatabaseEntities();
+
+var t = new test //Make sure you have a table called test in DB
+{
+    ID = Guid.NewGuid(),
+    name = "blah",
+};
+
+context.test.Add(t);
+context.SaveChanges();
+------------------------------------------------
+public void UpdateStudent(string firstName, string lastName){
+    var student = new Student() {
+                    FirstName = firstName,
+                    Lastname = lastName
+                    }
+ 
+    //Add to memory
+    entities.AddToStudents(student);
+    //Save to database
+    entities.SaveChanges();
+}

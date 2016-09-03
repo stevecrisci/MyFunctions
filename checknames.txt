@@ -1,0 +1,27 @@
+ <script>
+        $(function () {
+            function checkNames() {
+                var firstname = document.getElementById("Query_FirstName").value;
+                var lastname = document.getElementById("Query_LastName").value;
+                if (firstname != '' && lastname == '' || firstname == '' && lastname != '') {
+                    document.getElementById("divAlert").style.visibility = 'visible';
+                    if (firstname == '')
+                        document.getElementById("LNAlert").innerHTML = "First Name REQUIRED";
+                    else
+                        document.getElementById("LNAlert").innerHTML = "Last Name REQUIRED";
+                    //document.getElementById("Query_LastName").focus();
+                    return false;
+                }
+                else {
+                    document.getElementById("divAlert").style.visibility = 'none';
+                    document.getElementById("LNAlert").innerHTML = "";
+                    return true;
+                }
+            }
+
+            //$(document).on('change', '#Query_FirstName', checkNames);
+            //$(document).on('change', '#Query_LastName', checkNames);
+            $(document).on('click', '#SearchButton', checkNames);
+        });
+    </script>
+
